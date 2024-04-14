@@ -1,23 +1,23 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #e6e9eb;
+    color: #f2f4f0;
     background: #0b0d0f;
 }
 h1{
     margin: 4 4 4 4;
-    background: #0b0d0f;
+    background: #12140e;
 }
 h2{
     margin: 4 4 4 4;
-    background: #b5c1c9;
+    background: #bac5a9;
 }
 h3{
     margin: 4 4 4 4;
-    background: #475966;
+    background: #56643f;
 }
 h4{
     margin: 4 4 4 4;
-    background: #7491a4;
+    background: #8fa768;
 }
 /*
     text: #e6e9eb;
@@ -25,4 +25,12 @@ h4{
     primary: #b5c1c9;
     secondary: #475966;
     accent: #7491a4;
+*/
+
+/* Green Palette
+--text: #f2f4f0;
+--background: #12140e;
+--primary: #bac5a9;
+--secondary: #56643f;
+--accent: #8fa768;
 */
