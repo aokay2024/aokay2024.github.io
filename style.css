@@ -1,11 +1,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    text: #e6e9eb;
+    color: #e6e9eb;
     background: #0b0d0f;
-
 }
 
 /*
+    text: #e6e9eb;
+    background: #0b0d0f;
     primary: #b5c1c9;
     secondary: #475966;
     accent: #7491a4;
