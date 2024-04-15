@@ -186,7 +186,10 @@ li a {
     text-decoration: none;
     }
 
-li a:hover { background-color: #6b8b85; }
+li a:hover { 
+            background-color: #6b8b85;
+            border-radius: 15px;
+            }
 
 
 
