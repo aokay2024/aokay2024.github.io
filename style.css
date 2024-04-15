@@ -176,6 +176,7 @@ ul {
 
 li {
     float: left;
+    transition: height 0.5s;
     }
 
 li a {
@@ -184,7 +185,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    transition: height 0.5s;
     }
 
 li a:hover { 
