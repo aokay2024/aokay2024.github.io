@@ -114,7 +114,7 @@ h1 {    color: #edf6f4;
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 20px;
     }
-    .grid-container > h1 {
+    .grid-container1 > div {
         background-color: #3a5c75;
         text-align: left;
         padding: 10px 10px 10px 10px;
@@ -128,7 +128,7 @@ h2 {    color: #edf6f4;
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 20px;
     }
-    .grid-container > h2 {
+    .grid-container2 > div {
         background-color: #a1cbc3;
         text-align: left;
         padding: 10px 10px 10px 10px;
@@ -142,7 +142,7 @@ h3 {    color: #edf6f4;
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 50px;
     }
-    .grid-container > h3 {
+    .grid-container3 > div {
         background-color: #355165;
         text-align: left;
         padding: 10px 10px 10px 10px;
@@ -156,7 +156,7 @@ h4 {    color: #edf6f4;
         font-family: Georgia, "Times New Roman", serif;
         padding: 50px 50px 50px 50px;
     }
-    .grid-container > h4 {
+    .grid-container4 > div {
         background-color: #5c78a9;
         text-align: left;
         padding: 10px 10px 10px 10px;
