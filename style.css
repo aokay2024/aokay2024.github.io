@@ -170,7 +170,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+/*    overflow: hidden; */
     background-color: #a1cbc3;
     }
 
@@ -191,12 +191,11 @@ li a:hover {
             position: relative;
             animation-name:lift;
             animation-duration:0.5s;
-            animation-iteration-count:infinite;
             }
             @keyframes lift
             {
              0%   {left:0px; top:0px;}
-             100% {left:0px; top:-10px;}
+             100% {left:0px; top:-8px;}
             /*
              0%   {background-color:lightblue; left:0px; top:0px;}
              50%  {background-color:lightgreen; left:100px; top:0px;}
