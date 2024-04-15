@@ -4,20 +4,24 @@
 .header {   
         grid-area: header; 
         background-color: #3a5c75;
+        border-radius: 15px;
         }
 .menu { 
         grid-area: menu; 
         background-color: #a1cbc3;
+        border-radius: 15px;
       }
 
 .main { 
         grid-area: main; 
         background-color: #355165;
+        border-radius: 15px;
       }
 
 .footer { 
         grid-area: footer; 
         background-color: #5c78a9;
+        border-radius: 15px;
         }
 
 
@@ -54,7 +58,7 @@ div.gallery {
     gap: 10px;
     background-color: #000000;
     padding: 10px;
-    border-radius: 15px;
+/*    border-radius: 15px;  */
   }
   
 /*
