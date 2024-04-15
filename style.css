@@ -108,32 +108,37 @@ body {  background-color: azure;
     }
 
 
-h1 {    color: #3a5c75;
+h1 {    color: #cccccc;
+        background-color: #3a5c75;
         line-height: 200%;
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 20px;
     }
+    /*
     .grid-container h1 {
         padding: 5px 5px 5px 175px;
         font-size: 45px;
         background: #355165;
       } 
-
-h2 {    color: #a1cbc3;
+    */
+h2 {    color: #cccccc;
+        background-color: #a1cbc3;
         font-size: small;
         /*    line-height: 200%; */
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 20px;
     }
         
-h3 {    color: #355165;
+h3 {    color: #cccccc;
+        background-color: #355165;
         font-size: medium;
         /*    line-height: 200%; */
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 50px;
     }
 
-h4 {    color: #5c78a9;
+h4 {    color: #cccccc;
+        background-color: #5c78a9;
         font-size: large;
     /*    line-height: 200%; */
         font-family: Georgia, "Times New Roman", serif;
