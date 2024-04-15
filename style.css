@@ -38,7 +38,7 @@ div.gallery {
       'main main main main main main'
       'footer footer footer footer footer footer';
     gap: 10px;
-    background-color: #555555;
+    background-color: #000000;
     padding: 10px;
     border-radius: 15px;
   }
@@ -51,13 +51,14 @@ div.gallery {
     font-size: 14px;
     border-radius: 15px
   }
-  
+
+/*
   .grid-container h1 {
     padding: 5px 5px 5px 175px;
     font-size: 45px;
     background: #e8fd87;
   }  
-
+*/
 
   main {
     display: block;
@@ -100,7 +101,7 @@ p {
 body {  background-color: azure;
         color: blue;
         font-family: Arial, Helvetica, sans-serif;
-        background: grey;
+        background: black;
         color: #0050ff;
         background-image: url(http://static1.grsites.com/archive/textures/blue/blue126.jpg);
         background-repeat: repeat-y;
@@ -112,6 +113,11 @@ h1 {    color: #3a5c75;
         font-family: Georgia, "Times New Roman", serif;
         padding-left: 20px;
     }
+    .grid-container h1 {
+        padding: 5px 5px 5px 175px;
+        font-size: 45px;
+        background: #355165;
+      } 
 
 h2 {    color: #a1cbc3;
         font-size: small;
