@@ -124,19 +124,19 @@ p {
                 padding-left: 20px;
                 }
 
-        h2 {    color: #50aa50;
+        h2 {    color: #a1cbc3;
                 font-size: small;
             /*    line-height: 200%; */
                 font-family: Georgia, "Times New Roman", serif;
                 padding-left: 20px;
                 }
-        h3 {    color: #50aa50;
+        h3 {    color: #355165;
                 font-size: medium;
             /*    line-height: 200%; */
                 font-family: Georgia, "Times New Roman", serif;
                 padding-left: 50px;
                 }
-        h4 {    color: #50aa50;
+        h4 {    color: #5c78a9;
                 font-size: large;
             /*    line-height: 200%; */
                 font-family: Georgia, "Times New Roman", serif;
@@ -145,22 +145,9 @@ p {
 
         ol {    font-family: Courier New, Lucida Console;}
 
-        .new {  color: #FF0000;
-                font-style: italic;
-                }
-
-
-
-
         .footer {       font-size: small;
                         text-align: center;
                         font-style: italic;}
-
-
-        #bigred {       color: #FF0000;
-                        font-size:2em;
-                        font-style: italic;
-           }
 
         #wrapper {      margin-left: auto;
                         margin-right: auto;
@@ -221,20 +208,12 @@ body {
     color: #edf6f4;
     background: #000000;
 }
-
-h2{
-    margin: 4 4 4 4;
-    background: #a1cbc3;
-}
-h3{
-    margin: 4 4 4 4;
-    background: #355165;
-}
+/*
 h4{
     margin: 4 4 4 4;
     background: #5c78a9;
 }
-
+*/
 
 
 
