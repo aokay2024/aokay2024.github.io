@@ -196,25 +196,5 @@ li a {
 
 li a:hover {
   background-color: #111;
-  position: relative;
-  animation-name:lift;
-  animation-duration:0.5s;
-  animation-iteration-count:infinite;
 }
-
-@keyframes lift
-{
- 0%   {left:0px; top:0px;}
- 50%  {left:0px; top:10px;}
- 100% {left:0px; top:30px;}
-/*
- 0%   {background-color:lightblue; left:0px; top:0px;}
- 50%  {background-color:lightgreen; left:100px; top:0px;}
- 100% {background-color:lightblue; left:0px; top:0px;}
-*/
-}
-
-
-
-
 
