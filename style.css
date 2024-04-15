@@ -1,53 +1,257 @@
+/*
+   Flex Code
+*/
+.header {   
+        grid-area: header; 
+        background-color: #3a5c75;
+        border-radius: 15px;
+        }
+.menu { 
+        grid-area: menu; 
+        background-color: #a1cbc3;
+        border-radius: 15px;
+      }
 
-            body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-            body, html {
-              height: 100%;
-              color: #777;
-              line-height: 1.8;
-            }
-            
-            /* Create a Parallax Effect */
-            .bgimg-1, .bgimg-2, .bgimg-3 {
-              background-attachment: fixed;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-            
-            /* First image (Logo. Full height) */
-            .bgimg-1 {
-              background-image: url('images/moose.png');
-              min-height: 100%;
-            }
-            
-            /* Second image (Portfolio)
-            .bgimg-2 {
-              background-image: url("/w3images/parallax2.jpg");
-              min-height: 400px;
-            }
-            */
-            
-            /* Third image (Contact)
-            .bgimg-3 {
-              background-image: url("/w3images/parallax3.jpg");
-              min-height: 400px;
-            }
-            */
-            
-            .w3-wide {letter-spacing: 10px;}
-            .w3-hover-opacity {cursor: pointer;}
-            
-            /* Turn off parallax scrolling for tablets and phones */
-            @media only screen and (max-device-width: 1600px) {
-              .bgimg-1, .bgimg-2, .bgimg-3 {
-                background-attachment: scroll;
-                min-height: 400px;
-              }
-            }
+.main { 
+        grid-area: main; 
+        background-color: #355165;
+        border-radius: 15px;
+      }
+
+.footer { 
+        grid-area: footer; 
+        background-color: #5c78a9;
+        border-radius: 15px;
+        }
 
 
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu menu menu menu menu menu'
+      'main main main main main main'
+      'footer footer footer footer footer footer';
+    gap: 10px;
+    background-color: #000000;
+    padding: 10px;
+/*    border-radius: 15px;  */
+  }
+  
+/*
+  .grid-container > div {
+    background-color: #5555ff;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+    border-radius: 15px
+  }
+*/
+
+/*
+  .grid-container h1 {
+    padding: 5px 5px 5px 175px;
+    font-size: 45px;
+    background: #e8fd87;
+  }  
+*/
+
+  main {
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+    padding: 1em;
+    background: #f0f0f0;
+    border: 2px solid #0050ff;
+}
+label {
+    width: 10em;
+    float: left;
+    padding-right: 1em;
+    padding-bottom: .5em;
+}
+#data input {
+    float: left;
+    width: 15em;
+    margin-bottom: .5em;
+}
+#data span {
+    padding-left: .25em;
+}
+#buttons input {
+    float: left;
+    margin-bottom: .5em;
+}
+
+
+br {
+    clear: left;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #edf6f4;
+}
+
+
+body {  background-color: azure;
+        color: blue;
+        font-family: Arial, Helvetica, sans-serif;
+        background: black;
+        color: #0050ff;
+        background-image: url(http://static1.grsites.com/archive/textures/blue/blue126.jpg);
+        background-repeat: repeat-y;
+    }
+
+
+h1 {    color: #edf6f4;
+        line-height: 200%;
+        font-family: Georgia, "Times New Roman", serif;
+        padding-left: 20px;
+    }
+
+h2 {    color: #edf6f4;
+        font-size: small;
+        /*    line-height: 200%; */
+        font-family: Georgia, "Times New Roman", serif;
+        padding-left: 20px;
+    }
+        
+h3 {    color: #edf6f4;
+        font-size: medium;
+        /*    line-height: 200%; */
+        font-family: Georgia, "Times New Roman", serif;
+        padding-left: 50px;
+    }
+
+h4 {    color: #edf6f4;
+        font-size: large;
+    /*    line-height: 200%; */
+        font-family: Georgia, "Times New Roman", serif;
+        padding: 50px 50px 50px 50px;
+    }
+
+ol {    font-family: Courier New, Lucida Console;}
+
+.footer {       font-size: small;
+                text-align: center;
+                font-style: italic;
+        }
+
+#wrapper {      margin-left: auto;
+                margin-right: auto;
+                width:80%; 
+         }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+/*    overflow: hidden; */
+    background-color: #a1cbc3;
+    }
+
+li {
+    float: left;
+    }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+li a:hover { 
+            background-color: #6b8b85;
+            }
+
+            
+            
+            
+            
+            
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+   New Code
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #edf6f4;
+    background: #000000;
+}
+/*
+h4{
+    margin: 4 4 4 4;
+    background: #5c78a9;
+}
+*/
+
+
+
+
+
+
+
+/* Colors 
+
+Frosty Blue
+--text: #edf6f4;
+--background: #050a09;
+--primary: #a1cbc3;
+--secondary: #355165;
+--accent: #5c78a9;
+*/
+
+
+/* Green Palette
+--text: #f2f4f0;
+--background: #12140e;
+--primary: #bac5a9;
+--secondary: #56643f;
+--accent: #8fa768;
+*/
 
 
