@@ -184,24 +184,14 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: height 0.5s;
     }
 
 li a:hover { 
             background-color: #6b8b85;
-            position: relative;
-            animation-name:lift;
-            animation-duration:0.5s;
+            height: 8px;
             }
-            @keyframes lift
-            {
-             0%   {left:0px; top:0px;}
-             100% {left:0px; top:-8px;}
-            /*
-             0%   {background-color:lightblue; left:0px; top:0px;}
-             50%  {background-color:lightgreen; left:100px; top:0px;}
-             100% {background-color:lightblue; left:0px; top:0px;}
-            */
-            }
+
             
             
             
