@@ -38,7 +38,12 @@ div.desc {
 .grid-container {
   display: grid;
   grid-template-areas:
+    'sunday monday tuesday wednesday thursday friday saturday'
+    'sunday monday tuesday wednesday thursday friday saturday'
+    'sunday monday tuesday wednesday thursday friday saturday'
+    'sunday monday tuesday wednesday thursday friday saturday'
     'sunday monday tuesday wednesday thursday friday saturday';
+
   gap: 10px;
   background-color: #006600;
   padding: 10px;
@@ -49,7 +54,7 @@ div.desc {
   background-color: #333;
 /*  rgba(255, 255, 255, 0.8); */
   text-align: left;
-  padding: 10px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
   font-size: 14px;
   border-radius: 15px
 }
