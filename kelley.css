@@ -1,9 +1,11 @@
 
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.item1 { grid-area: sunday; }
+.item2 { grid-area: monday; }
+.item3 { grid-area: tuesday; }
+.item4 { grid-area: wednesday; }
+.item5 { grid-area: thursday; }
+.item6 { grid-area: friday;}
+.item7 { grid-area: saturday;}
 
 div.gallery {
   margin: 5px;
@@ -36,9 +38,7 @@ div.desc {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main main main'
-    'menu footer footer footer footer footer';
+    'sunday monday tuesday wednesday thursday friday saturday';
   gap: 10px;
   background-color: #006600;
   padding: 10px;
