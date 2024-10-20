@@ -4,47 +4,23 @@
 <head>
     <title>Home Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Network Animation</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #111;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="grid-container">
-    <div class="header">
-    <a href="index.html">
-      <img src="images/moose.png" style="float:left"
-      alt = "Company Logo" height = "100" width = "150">
-    </a>
-    <p>Header Part</p>
-    </div>
-  </div>
-
-  <div class="grid-container">
-    <div class="menu">
-      <ul>
-        <li><a href="index.html"> Home </a></li>
-        <li><a href="about.html"> About </a></li>
-        <li><a href="services.html"> Services </a></li>
-        <li><a href="contact.html"> Contact </a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="grid-container">
-    <div class="main">
-      <div class='particle-network-animation'>
-        <h2>This is anim</h2>
-        <script src="javaAnim.js"></script>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid-container">
-    <div class="footer">
-       <h3>text</h3>
-       <h4> <a href="about.html"> About Page </a> </h4>
-    </div>
-  </div>
-
-  </body>
+  <canvas id="networkCanvas"></canvas>
+  <script src="neuralNetworkAnimation.js"></script>
+</body>
 </html>
-
-
