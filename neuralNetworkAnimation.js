@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 let nodes = [];
 let connections = [];
 const nodeCount = 50; // Number of nodes
-const maxConnectionDistance = 150; // Maximum distance between connected nodes
+const maxConnectionDistance = 80; // Maximum distance between connected nodes
 
 // Resize the canvas to full screen
 function resizeCanvas() {
