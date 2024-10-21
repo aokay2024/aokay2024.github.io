@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("networkCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -38,7 +39,7 @@ class Node {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = "#00ffcc";
+    ctx.fillStyle = '#3a5c75';
     ctx.fill();
     ctx.closePath();
   }
