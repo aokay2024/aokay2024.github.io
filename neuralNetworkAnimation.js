@@ -59,7 +59,7 @@ function drawConnections() {
         ctx.beginPath();
         ctx.moveTo(nodes[i].x, nodes[i].y);
         ctx.lineTo(nodes[j].x, nodes[j].y);
-        ctx.strokeStyle = `rgba(0, 255, 204, ${1 - dist / maxConnectionDistance})`;
+        ctx.strokeStyle = `rgba(58, 92, 117, ${1 - dist / maxConnectionDistance})`;
         ctx.lineWidth = 1;
         ctx.stroke();
         ctx.closePath();
