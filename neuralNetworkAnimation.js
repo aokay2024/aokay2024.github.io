@@ -19,7 +19,7 @@ class Node {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.radius = (Math.random() % 0.7) * 2 + Math.random(); // Size of the node (3)
+    this.radius = (Math.random() % 0.7) * 2; // Size of the node (3)
     this.vx = (Math.random() - 0.5) * .7; // Horizontal velocity
     this.vy = (Math.random() - 0.5) * .7; // Vertical velocity
   }
