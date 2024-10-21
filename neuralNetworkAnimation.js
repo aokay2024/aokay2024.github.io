@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 let nodes = [];
 let connections = [];
 const nodeCount = 50; // Number of nodes
-const maxConnectionDistance = 80; // Maximum distance between connected nodes
+const maxConnectionDistance = 140; // Maximum distance between connected nodes
 
 // Resize the canvas to full screen
 function resizeCanvas() {
@@ -20,8 +20,8 @@ class Node {
     this.x = x;
     this.y = y;
     this.radius = 3; // Size of the node
-    this.vx = (Math.random() - 0.5) * 2; // Horizontal velocity
-    this.vy = (Math.random() - 0.5) * 2; // Vertical velocity
+    this.vx = (Math.random() % .3) * 2; // Horizontal velocity
+    this.vy = (Math.random() % .3) * 2; // Vertical velocity - 0.5
   }
 
   // Update the node's position
