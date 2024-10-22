@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Animation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      /* Global Styles */
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #111;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      /* Canvas */
+      canvas {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      /* Navigation Bar */
+      .glass-navbar {
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .glass-navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .glass-navbar .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .glass-navbar .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      /* Hamburger Button */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 999;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+
+      /* Text Box Container */
+      .text-box-container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        margin-top: 120px;
+        flex-wrap: wrap;
+      }
+
+      .text-box {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 300px;
+        margin: 10px;
+      }
+
+      .text-box h3 {
+        font-size: 24px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .glass-navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .glass-navbar .nav-links {
+          flex-direction: column;
+          gap: 10px;
+          display: none; /* Hide nav links by default */
+          width: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 10px;
+        }
+
+        .hamburger {
+          display: flex; /* Show the hamburger icon on small screens */
+        }
+
+        .nav-links.show {
+          display: flex; /* Show nav links when activated */
+        }
+
+        .text-box-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .text-box {
+          max-width: 100%;
+          margin: 10px;
+        }
+
+        .text-box h3 {
+          font-size: 22px;
+        }
+
+        .text-box p {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .glass-navbar {
+          padding: 10px;
+        }
+
+        .text-box-container {
+          margin-top: 100px;
+        }
+
+        .text-box h3 {
+          font-size: 20px;
+        }
+
+        .text-box p {
+          font-size: 12px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="glass-navbar">
+        <div class="logo">A-OK AI</div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Neural Network Canvas Animation -->
+    <canvas id="networkCanvas"></canvas>
+    <script src="neuralNetworkAnimation.js"></script>
+
+    <!-- Main Content -->
+    <div class="text-box-container">
+        <div class="text-box">
+            <h3>Our Mission</h3>
+            <p>At A-OK AI, we focus on delivering custom AI solutions tailored to small and medium businesses. Our goal is to make AI approachable and affordable for everyone.</p>
+        </div>
+
+        <div class="text-box">
+            <h3>Our Services</h3>
+            <p>We provide AI-powered automation, chatbots, and data analysis tools that help companies streamline operations and make smarter decisions.</p>
+        </div>
+
+        <div class="text-box">
+            <h3>Contact Us</h3>
+            <p>If you're interested in transforming your business with AI, get in touch with us today. We're here to answer all your questions!</p>
+        </div>
+    </div>
+
+    <!-- Hamburger Menu Toggle Script -->
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
+</body>
+</html>
