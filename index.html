@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A-OK AI Solutions</title>
   <style>
-    /* Center the elements on the page */
+    /* Professional font and body settings */
     body {
       margin: 0;
       padding: 0;
       overflow: hidden;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       background: #111; /* Dark background */
       display: flex;
       justify-content: center;
@@ -30,13 +30,13 @@
       height: 100vh;
     }
 
-    /* Glassmorphic welcome box */
+    /* Glassmorphic black welcome box */
     .glass-box {
-      background: rgba(255, 255, 255, 0.15); /* Increased opacity for the box */
+      background: rgba(0, 0, 0, 0.7); /* Black glass-like background */
       backdrop-filter: blur(12px); /* Blur for glassmorphism */
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.2); /* Frosted border */
-      padding: 20px;
+      padding: 30px;
       text-align: center;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
       color: #edf6f4; /* Frosty text color */
@@ -47,19 +47,21 @@
     }
 
     .glass-box h2 {
-      font-size: 2em;
-      margin: 0 0 10px;
+      font-size: 2.4em;
+      font-weight: 600;
+      margin: 0 0 15px;
     }
 
     .glass-box p {
-      font-size: 1.1em;
+      font-size: 1.2em;
+      line-height: 1.6;
       margin: 0;
     }
 
     /* Style for the waitlist button */
     .waitlist-button {
       padding: 20px; /* Larger padding for the button */
-      background-color: rgba(255, 255, 255, 0.15); /* Same as glass box */
+      background-color: rgba(0, 0, 0, 0.7); /* Black glass-like button */
       border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
       border-radius: 20px;
       color: #fff;
@@ -73,7 +75,7 @@
     }
 
     .waitlist-button:hover {
-      background-color: rgba(255, 255, 255, 0.25); /* Slightly more opaque on hover */
+      background-color: rgba(0, 0, 0, 0.85); /* Slightly more opaque on hover */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
     }
 
@@ -87,9 +89,9 @@
       z-index: 12;
     }
 
-    /* Glassmorphic form styling */
+    /* Glassmorphic black form styling */
     form {
-      background: rgba(255, 255, 255, 0.15); /* Same opacity for the form as the glass box */
+      background: rgba(0, 0, 0, 0.7); /* Black glass-like form background */
       backdrop-filter: blur(12px); /* Blur effect for glassmorphism */
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.2); /* Soft frosted border */
@@ -102,7 +104,7 @@
     }
 
     label {
-      font-size: 1em;
+      font-size: 1.1em;
       color: #edf6f4;
       display: block;
       margin-bottom: 10px;
@@ -113,9 +115,9 @@
     input[type="email"],
     textarea {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       border: 1px solid rgba(255, 255, 255, 0.2); /* Light transparent border */
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 20px;
       background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
       color: #edf6f4; /* Light text color */
@@ -135,8 +137,8 @@
 
     button {
       width: 100%;
-      padding: 15px;
-      background-color: rgba(255, 255, 255, 0.15); /* Glassy button background */
+      padding: 16px;
+      background-color: rgba(0, 0, 0, 0.7); /* Black glass-like button */
       border: none;
       border-radius: 20px;
       color: #fff;
@@ -147,7 +149,7 @@
     }
 
     button:hover {
-      background-color: rgba(255, 255, 255, 0.25);
+      background-color: rgba(0, 0, 0, 0.85);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
@@ -157,7 +159,7 @@
   <canvas id="networkCanvas"></canvas>
   <script src="neuralNetworkAnimation.js"></script>
 
-  <!-- Glassmorphic Welcome Box -->
+  <!-- Glassmorphic Black Welcome Box -->
   <div class="glass-box">
     <h2>Welcome to A-OK AI</h2>
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
