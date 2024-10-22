@@ -97,38 +97,60 @@ body, html {
   flex-wrap: wrap;
   gap: 20px; /* Spacing between the boxes */
   justify-content: space-around;
-  margin: 40px 0; /* Space around the container */
+  margin: 40px 0;
 }
 
 .text-box {
-  background-color: var(--secondary); /* Secondary color as background */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  padding: 20px;
-  width: calc(33.333% - 40px); /* Three boxes per row with gap */
+  background: linear-gradient(135deg, var(--primary), var(--accent)); /* Gradient background */
+  border-radius: 16px; /* Softer rounded corners */
+  padding: 30px;
+  width: calc(33.333% - 40px); /* Three boxes per row */
   max-width: 400px;
-  min-width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Text Color Updates */
-.text-box h3 {
-  font-size: 1.5em;
-  color: var(--primary); /* Use primary color for headings */
-  margin-bottom: 10px;
-}
-
-.text-box p {
-  font-size: 1em;
-  color: var(--text); /* Frosty Blue for text */
-  line-height: 1.6;
+  min-width: 280px;
+  color: var(--text); /* Frosty text color */
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light modern shadow */
+  position: relative;
+  overflow: hidden;
 }
 
 /* Hover Effect */
 .text-box:hover {
-  transform: translateY(-10px); /* Subtle lift effect */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
-  background-color: var(--accent); /* Change background to accent color on hover */
+  transform: translateY(-8px); /* Modern lift effect */
+  background: linear-gradient(135deg, var(--accent), var(--primary)); /* Invert the gradient on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Text Styling */
+.text-box h3 {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: var(--text); /* Light text color */
+  margin-bottom: 15px;
+}
+
+.text-box p {
+  font-size: 1.1em;
+  color: var(--text); /* Light text color */
+  line-height: 1.8;
+}
+
+/* Box Accent Line (Modern Detail) */
+.text-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--text); /* Frosty accent line */
+  transition: transform 0.4s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.text-box:hover::before {
+  transform: scaleX(1); /* Line appears on hover */
 }
 
 /* Responsive for Smaller Screens */
@@ -138,6 +160,7 @@ body, html {
     max-width: 100%;
   }
 }
+
 
 /* Add global body and background color */
 body {
