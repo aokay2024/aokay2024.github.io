@@ -32,14 +32,13 @@
 
     /* Glassmorphic black welcome box */
     .glass-box {
-      background: rgba(0, 0, 0, 0.7); /* Black glass-like background */
+      background: rgba(0, 0, 0, 0.6); /* Slightly more transparent black glass */
       backdrop-filter: blur(12px); /* Blur for glassmorphism */
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2); /* Frosted border */
+      border-radius: 20px; /* Rounded corners */
       padding: 30px;
       text-align: center;
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
-      color: #edf6f4; /* Frosty text color */
+      color: #d1d1d1; /* Softer light gray text */
       z-index: 10;
       width: 80%; /* Take up more width */
       max-width: 600px;
@@ -61,10 +60,9 @@
     /* Style for the waitlist button */
     .waitlist-button {
       padding: 20px; /* Larger padding for the button */
-      background-color: rgba(0, 0, 0, 0.7); /* Black glass-like button */
-      border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+      background-color: rgba(0, 0, 0, 0.6); /* Black glass-like button */
       border-radius: 20px;
-      color: #fff;
+      color: #d1d1d1; /* Softer text color */
       font-size: 1.3em;
       cursor: pointer;
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -75,7 +73,7 @@
     }
 
     .waitlist-button:hover {
-      background-color: rgba(0, 0, 0, 0.85); /* Slightly more opaque on hover */
+      background-color: rgba(0, 0, 0, 0.75); /* Slightly more opaque on hover */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
     }
 
@@ -91,13 +89,12 @@
 
     /* Glassmorphic black form styling */
     form {
-      background: rgba(0, 0, 0, 0.7); /* Black glass-like form background */
+      background: rgba(0, 0, 0, 0.6); /* Black glass-like form background */
       backdrop-filter: blur(12px); /* Blur effect for glassmorphism */
       border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2); /* Soft frosted border */
       padding: 30px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-      color: #edf6f4; /* Frosty text color */
+      color: #d1d1d1; /* Softer text color */
       display: flex;
       flex-direction: column;
       align-items: center; /* Center the form fields */
@@ -105,7 +102,7 @@
 
     label {
       font-size: 1.1em;
-      color: #edf6f4;
+      color: #d1d1d1; /* Softer light gray for labels */
       display: block;
       margin-bottom: 10px;
       width: 100%; /* Make label span full width */
@@ -120,7 +117,7 @@
       border-radius: 10px;
       margin-bottom: 20px;
       background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-      color: #edf6f4; /* Light text color */
+      color: #d1d1d1; /* Softer text color */
       max-width: 500px; /* Limit input and textarea width */
     }
 
@@ -138,10 +135,10 @@
     button {
       width: 100%;
       padding: 16px;
-      background-color: rgba(0, 0, 0, 0.7); /* Black glass-like button */
+      background-color: rgba(0, 0, 0, 0.6); /* Black glass-like button */
       border: none;
       border-radius: 20px;
-      color: #fff;
+      color: #d1d1d1; /* Softer text color */
       font-size: 1.2em;
       cursor: pointer;
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -149,7 +146,7 @@
     }
 
     button:hover {
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0, 0, 0, 0.75);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
