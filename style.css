@@ -20,7 +20,6 @@ body, html {
   align-items: center;
   height: 100vh;
   background-color: #050a09; /* Dark background to contrast the glassmorphism */
-  z-index: 9;
 }
 
 /* Glassmorphic Box Styling */
