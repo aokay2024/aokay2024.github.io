@@ -1,3 +1,11 @@
+:root {
+    --text: #edf6f4;
+    --background: #050a09;
+    --primary: #a1cbc3;
+    --secondary: #355165;
+    --accent: #5c78a9;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -26,7 +34,7 @@ body, html {
 .logo {
   font-size: 1.8em;
   font-weight: bold;
-  color: #edf6f4;
+  color: var(--text);
   text-transform: uppercase;
 }
 
@@ -40,7 +48,7 @@ body, html {
 /* Link Styles */
 .nav-links li a {
   text-decoration: none;
-  color: #edf6f4;
+  color: car(--text);
   font-size: 1.1em;
   font-weight: 600;
   position: relative;
@@ -55,7 +63,7 @@ body, html {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #00ffcc; /* Accent color */
+  background-color: var(--accent); /* Accent color */
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
@@ -67,7 +75,7 @@ body, html {
 }
 
 .nav-links li a:hover {
-  color: #00ffcc; /* Accent color on hover */
+  color: var(--accent); /* Accent color on hover */
 }
 
 /* Responsive Design */
@@ -83,6 +91,59 @@ body, html {
   }
 }
 
+/* Styling for Text Boxes */
+.text-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between the boxes */
+  justify-content: space-around;
+  margin: 40px 0; /* Space around the container */
+}
+
+.text-box {
+  background-color: var(--secondary); /* Secondary color as background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 20px;
+  width: calc(33.333% - 40px); /* Three boxes per row with gap */
+  max-width: 400px;
+  min-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Text Color Updates */
+.text-box h3 {
+  font-size: 1.5em;
+  color: var(--primary); /* Use primary color for headings */
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1em;
+  color: var(--text); /* Frosty Blue for text */
+  line-height: 1.6;
+}
+
+/* Hover Effect */
+.text-box:hover {
+  transform: translateY(-10px); /* Subtle lift effect */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+  background-color: var(--accent); /* Change background to accent color on hover */
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  .text-box {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 100%;
+  }
+}
+
+/* Add global body and background color */
+body {
+  background-color: var(--background); /* Dark background */
+  color: var(--text); /* Frosty blue text */
+}
 
 
 
