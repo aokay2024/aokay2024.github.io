@@ -7,18 +7,20 @@ body, html {
 
 /* Glassmorphic Navbar */
 .glass-navbar {
-  width: 110%;
-  max-width: 1200px;
-  background: rgba(255, 255, 255, 0.15); /* Slightly less transparency for sharper look */
-  padding: 15px 30px;
+  width: 100%; /* Full width */
+  background: rgba(255, 255, 255, 0.15); /* Glassmorphic background */
+  padding: 15px 50px; /* Adjust padding to give space for content */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Lighter, more subtle shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   backdrop-filter: blur(8px); /* Glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly crisper border */
-  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Crisp border */
+  position: fixed; /* Keep navbar fixed at the top of the page */
+  top: 0;
+  left: 0;
   z-index: 10;
+  border-radius: 0px; /* Remove border radius for sharp edges */
 }
 
 /* Logo */
