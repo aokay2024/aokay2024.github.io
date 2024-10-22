@@ -69,15 +69,6 @@ body {
   }
 }
 
-canvas {
-  display: block;
-  position: fixed; /* Fix the canvas to the background */
-  top: 0;
-  left: 0;
-  z-index: 1; /* Send the canvas behind the navbar */
-  width: 100vw; /* Take full screen width */
-  height: 100vh; /* Take full screen height */
-}
 
 
 
