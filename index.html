@@ -71,22 +71,25 @@ canvas {
     ],
     styles: {
       title: {
-        backgroundColor: "gray"
+        backgroundColor: "#050a09",  // Dark background for the title
+        color: "#edf6f4",  // Light frosty blue text color for the title
       },
       button: {
-          width: 80%;
-  max-width: 800px;
-  padding: 40px;
-  border-radius: 20px; /* Rounded corners */
-  background: rgba(0, 0, 0, 0.3); /* Transparent black background */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Soft shadow */
-  backdrop-filter: blur(15px); /* Blur to simulate glass */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for a frosted glass effect */
-  color: #edf6f4; /* Light text color for contrast */
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 10;
-      }
+        backgroundColor: "rgba(0, 0, 0, 0.3)",  // Glassmorphic button style
+        color: "#edf6f4",  // Light text color
+        border: "1px solid rgba(255, 255, 255, 0.2)",  // Frosted border effect
+        borderRadius: "12px",  // Rounded corners
+        padding: "10px 20px",  // Padding for button size
+        fontSize: "16px",  // Font size for button text
+        width: "80%"
+      },
+      input: {
+        backgroundColor: "rgba(255, 255, 255, 0.1)",  // Transparent input background
+        color: "#edf6f4",  // Light input text color
+        border: "1px solid rgba(255, 255, 255, 0.2)",  // Light border for inputs
+        borderRadius: "10px",  // Rounded input corners
+        padding: "10px",  // Padding for input fields
+        width: "100%"  // Full width for input fields
     }
   });
 </script>
