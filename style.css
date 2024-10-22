@@ -16,12 +16,10 @@ body, html {
   align-items: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   backdrop-filter: blur(8px); /* Glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Crisp border */
   position: fixed; /* Keep navbar fixed at the top of the page */
   top: 0;
   left: 0;
   z-index: 10;
-  border-radius: 0px; /* Remove border radius for sharp edges */
 }
 
 /* Logo */
