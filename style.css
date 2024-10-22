@@ -14,7 +14,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); Subtle shadow */
   backdrop-filter: blur(8px); /* Glass effect */
   position: fixed; /* Keep navbar fixed at the top of the page */
   top: 0;
