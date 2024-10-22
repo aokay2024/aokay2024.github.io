@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Waitlist</title>
+  <title>A-OK AI Solutions</title>
   <style>
     /* Professional font and body settings */
     body {
@@ -30,6 +30,63 @@
       height: 100vh;
     }
 
+    /* Glassmorphic black welcome box */
+    .glass-box {
+      background: rgba(0, 0, 0, 0.6); /* Black glass-like form background */
+      backdrop-filter: blur(12px); /* Blur effect for glassmorphism */
+      border-radius: 20px; /* Rounded corners */
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
+      color: #d1d1d1; /* Softer light gray text */
+      z-index: 10;
+      width: 80%; /* Take up more width */
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .glass-box h2 {
+      font-size: 2.4em;
+      font-weight: 600;
+      margin: 0 0 15px;
+    }
+
+    .glass-box p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Style for the waitlist button */
+    .waitlist-button {
+      padding: 20px; /* Larger padding for the button */
+      background-color: rgba(0, 0, 0, 0.6); /* Black glass-like button */
+      border-radius: 20px;
+      color: #d1d1d1; /* Softer text color */
+      font-size: 1.3em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      z-index: 12;
+      width: 80%; /* Make the button wider */
+      max-width: 600px;
+      margin-bottom: 20px; /* Space between button and form */
+    }
+
+    .waitlist-button:hover {
+      background-color: rgba(0, 0, 0, 0.75); /* Slightly more opaque on hover */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
+    }
+
+    /* Hidden form container for smooth dropdown */
+    .form-container {
+      max-width: 600px;
+      width: 80%; /* Form width same as button */
+      overflow: hidden;
+      height: 0;
+      transition: height 0.4s ease;
+      z-index: 12;
+    }
+
     /* Glassmorphic black form styling */
     form {
       background: rgba(0, 0, 0, 0.6); /* Black glass-like form background */
@@ -41,9 +98,6 @@
       display: flex;
       flex-direction: column;
       align-items: center; /* Center the form fields */
-      max-width: 600px;
-      width: 80%;
-      z-index: 12;
     }
 
     label {
@@ -117,35 +171,48 @@
 </head>
 <body>
 
-  <!-- Full-screen neural network background animation -->
   <canvas id="networkCanvas"></canvas>
   <script src="neuralNetworkAnimation.js"></script>
 
-  <!-- Form for AI Solutions Waitlist -->
-  <form action="https://formspree.io/f/xdkokzyw" method="POST">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
-    <label for="businessName">Business Name:</label>
-    <input type="text" id="businessName" name="businessName" placeholder="Enter your business name" required>
+  <!-- Glassmorphic Black Welcome Box -->
+  <div class="glass-box">
+    <h2>Welcome to A-OK AI</h2>
+    <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
+  </div>
 
-    <label for="industry">Industry:</label>
-    <input type="text" id="industry" name="industry" placeholder="Enter your industry" required>
+  <!-- Join Waitlist Button -->
+  <button class="waitlist-button" onclick="toggleForm()">Join Our Waitlist</button>
 
-    <label for="challenges">What challenges are you currently facing that AI could help solve?</label>
-    <input type="text" id="challenges" name="challenges" placeholder="Describe your challenges">
+  <!-- Hidden Form -->
+  <div class="form-container" id="waitlistForm">
+    <form action="https://formspree.io/f/xdkokzyw" method="POST">
+      <label for="businessName">Business Name:</label>
+      <input type="text" id="businessName" name="businessName" placeholder="Enter your business name" required>
 
-    <label>Which of the following areas would benefit your business the most? (Select all that apply):</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="areas[]" value="Process Automation">Process Automation</label>
-      <label><input type="checkbox" name="areas[]" value="Data Analysis & Insights">Data Analysis & Insights</label>
-      <label><input type="checkbox" name="areas[]" value="Customer Engagement & Support">Customer Engagement & Support</label>
-      <label><input type="checkbox" name="areas[]" value="Inventory & Supply Chain Management">Inventory & Supply Chain Management</label>
-      <label><input type="checkbox" name="areas[]" value="Marketing & Sales Optimization">Marketing & Sales Optimization</label>
-      <label><input type="text" name="areas_other" placeholder="Other (please specify)"></label>
-    </div>
+      <label for="industry">Industry:</label>
+      <input type="text" id="industry" name="industry" placeholder="Enter your industry" required>
 
-    <label>What is your current budget range for AI solutions?</label>
+      <label for="challenges">What challenges are you currently facing that AI could help solve?</label>
+      <input type="text" id="challenges" name="challenges" placeholder="Describe your challenges">
+
+      <label>Which of the following areas would benefit your business the most? (Select all that apply):</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="areas[]" value="Process Automation">Process Automation</label>
+        <label><input type="checkbox" name="areas[]" value="Data Analysis & Insights">Data Analysis & Insights</label>
+        <label><input type="checkbox" name="areas[]" value="Customer Engagement & Support">Customer Engagement & Support</label>
+        <label><input type="checkbox" name="areas[]" value="Inventory & Supply Chain Management">Inventory & Supply Chain Management</label>
+        <label><input type="checkbox" name="areas[]" value="Marketing & Sales Optimization">Marketing & Sales Optimization</label>
+        <label><input type="text" name="areas_other" placeholder="Other (please specify)"></label>
+      </div>
+
+      <label>How customizable do you need your AI solution to be?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="customization" value="Very flexible" required>Very flexible – tailored to specific needs</label>
+        <label><input type="radio" name="customization" value="Some customization">Some customization – adaptable with standard features</label>
+        <label><input type="radio" name="customization" value="Minimal customization">Minimal customization – prefer a ready-made solution</label>
+      </div>
+
+      <label>What is your current budget range for AI solutions?</label>
     <div class="radio-group">
       <label><input type="radio" name="budget" value="$1,000 - $5,000" required>$1,000 - $5,000</label>
       <label><input type="radio" name="budget" value="$5,000 - $15,000">$5,000 - $15,000</label>
@@ -153,17 +220,29 @@
       <label><input type="radio" name="budget" value="$50,000+">$50,000+</label>
     </div>
 
-    <label>Would you be interested in a demo or consultation?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="demo" value="Yes" required>Yes</label>
-      <label><input type="radio" name="demo" value="No">No</label>
-    </div>
+      <label>Would you be interested in a demo or consultation?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="demo" value="Yes" required>Yes</label>
+        <label><input type="radio" name="demo" value="No">No</label>
+      </div>
 
-    <label for="comments">Additional Comments or Questions:</label>
-    <textarea id="comments" name="comments" placeholder="Enter additional comments or questions"></textarea>
+      <label for="comments">Additional Comments or Questions:</label>
+      <textarea id="comments" name="comments" placeholder="Enter additional comments or questions"></textarea>
 
-    <button type="submit">Send</button>
-  </form>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleForm() {
+      var formContainer = document.getElementById('waitlistForm');
+      if (formContainer.style.height === "0px" || formContainer.style.height === "") {
+        formContainer.style.height = formContainer.scrollHeight + "px";
+      } else {
+        formContainer.style.height = "0px";
+      }
+    }
+  </script>
 
 </body>
 </html>
