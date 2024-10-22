@@ -20,24 +20,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-    }
-    /* Center the formbutton container */
-    .form-button-container {
-      display: flex;
-      justify-content: center; /* Centers horizontally */
-      align-items: center; /* Optionally, centers vertically */
-      height: 100vh; /* Full viewport height for vertical centering */
-    }
-
-    /* Ensures the formbutton itself is centered */
-    .formspree-button-wrapper {
-      display: inline-block;
-    }
-
-    /* Optional: Customize further */
-    .formspree-button-wrapper button {
-      width: auto; /* Ensure the button doesn't stretch */
-    }
+    } 
 canvas {
   display: block;
   position: fixed; /* Fix the canvas to the background */
@@ -58,12 +41,6 @@ canvas {
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
   </div>
 
-   <!-- Container to hold the button -->
-  <div class="form-button-container">
-    <div class="formspree-button-wrapper" id="formspreeButtonWrapper">
-      <!-- Formbutton will load here -->
-    </div>
-  </div>
 
   <!-- Load the Formspree form button script -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
@@ -78,6 +55,7 @@ canvas {
     formbutton("create", {
       action: "https://formspree.io/f/xdkokzyw", // Your Formspree form URL
       title: "Join the Waitlist", // Form title
+      theme: "classic",
       fields: [
         { 
           type: "email", 
@@ -114,7 +92,6 @@ canvas {
           width: "100%" // Full width for input fields
         }
       },
-      container: "#formspreeButtonWrapper" // Ensure formbutton loads inside the wrapper
     });
   </script>
 
