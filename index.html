@@ -42,55 +42,43 @@ canvas {
   <div class="glass-box">
     <h2>Welcome to A-OK AI</h2>
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
-  
-    <!-- Load the Formspree form button script -->
-    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-      /* paste this line in verbatim */
-      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-      
-      /* customize formbutton below */     
-      formbutton("create", {
-        action: "https://formspree.io/f/xdkokzyw",  // Your Formspree form URL
-        title: "Join the Waitlist",  // Updated title
-        fields: [
-          { 
-            type: "email", 
-            label: "Email:", 
-            name: "email",
-            required: true,
-            placeholder: "Enter your email"  // Placeholder text for the email field
-          },
-          { type: "submit", value: "Join Now" }  // Custom submit button label
-        ],
-        styles: {
-          title: {
-            backgroundColor: "#050a09",  // Dark background for the title
-            color: "#edf6f4",  // Light frosty blue text color for the title
-          },
-          button: {
-            backgroundColor: "rgba(0, 0, 0, 0.3)",  // Glassmorphic button style
-            color: "#edf6f4",  // Light text color
-            border: "1px solid rgba(255, 255, 255, 0.2)",  // Frosted border effect
-            borderRadius: "12px",  // Rounded corners
-            padding: "20px 40px",  // Large button size
-            fontSize: "1.5em",  // Larger font size
-            z-index: 10
-          },
-          input: {
-            backgroundColor: "rgba(255, 255, 255, 0.1)",  // Transparent input background
-            color: "#edf6f4",  // Light input text color
-            border: "1px solid rgba(255, 255, 255, 0.2)",  // Light border for inputs
-            borderRadius: "10px",  // Rounded input corners
-            padding: "10px",  // Padding for input fields
-            width: "100%"  // Full width for input fields
-          }
-        }
-      });
-    </script>
   </div>
 </div>
-
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xdkokzyw",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
