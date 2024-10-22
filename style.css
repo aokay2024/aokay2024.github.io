@@ -114,6 +114,7 @@ body, html {
   overflow: hidden;
   font-size: 1.1em;
   line-height: 1.6;
+  z-index: 9;
 }
 
 /* Specific Box Colors */
