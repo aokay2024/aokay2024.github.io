@@ -10,6 +10,7 @@ body, html {
   width: 100%; /* Full width */
   background: rgba(255, 255, 255, 0.15); /* Glassmorphic background */
   padding: 15px 50px; /* Adjust padding to give space for content */
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
