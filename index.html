@@ -21,13 +21,23 @@
       height: 100vh;
       margin: 0;
     }
+    /* Center the formbutton container */
+    .form-button-container {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Optionally, centers vertically */
+      height: 100vh; /* Full viewport height for vertical centering */
+    }
 
-  .form-button-container {
-    display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    align-items: center; /* Centers vertically if you need it */
-    height: 100vh; /* Optional: Full height to vertically center if needed */
-  }
+    /* Ensures the formbutton itself is centered */
+    .formspree-button-wrapper {
+      display: inline-block;
+    }
+
+    /* Optional: Customize further */
+    .formspree-button-wrapper button {
+      width: auto; /* Ensure the button doesn't stretch */
+    }
 canvas {
   display: block;
   position: fixed; /* Fix the canvas to the background */
@@ -48,54 +58,65 @@ canvas {
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
   </div>
 
-    <div class="form-button-container">
-<!-- Load the Formbutton script from Formspree -->
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-
-<script>
-  /* paste this line in verbatim */
-  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-  
-  /* customize formbutton below */     
-  formbutton("create", {
-    action: "https://formspree.io/f/xdkokzyw",  // Your Formspree form URL
-    title: "Join the Waitlist",  // Updated title
-    fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-        placeholder: "Enter your email"  // Placeholder text for the email field
-      },
-      { type: "submit", value: "Join Now" }  // Custom submit button label
-    ],
-    styles: {
-      title: {
-        backgroundColor: "#050a09",  // Dark background for the title
-        color: "#edf6f4",  // Light frosty blue text color for the title
-      },
-      button: {
-        backgroundColor: "rgba(0, 0, 0, 0.3)",  // Glassmorphic button style
-        color: "#edf6f4",  // Light text color
-        border: "1px solid rgba(255, 255, 255, 0.2)",  // Frosted border effect
-        borderRadius: "12px",  // Rounded corners
-        padding: "10px 20px",  // Padding for button size
-        fontSize: "16px",  // Font size for button text
-        display: "inline-block" 
-      },
-      input: {
-        backgroundColor: "rgba(255, 255, 255, 0.1)",  // Transparent input background
-        color: "#edf6f4",  // Light input text color
-        border: "1px solid rgba(255, 255, 255, 0.2)",  // Light border for inputs
-        borderRadius: "10px",  // Rounded input corners
-        padding: "10px",  // Padding for input fields
-        width: "100%"  // Full width for input fields
-      }
-    }
-  });
-</script>
+   <!-- Container to hold the button -->
+  <div class="form-button-container">
+    <div class="formspree-button-wrapper" id="formspreeButtonWrapper">
+      <!-- Formbutton will load here -->
     </div>
+  </div>
+
+  <!-- Load the Formspree form button script -->
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+  <script>
+    /* Formspree formbutton */
+    window.formbutton = window.formbutton || function() {
+      (formbutton.q = formbutton.q || []).push(arguments);
+    };
+
+    /* Customize the formbutton below */
+    formbutton("create", {
+      action: "https://formspree.io/f/xdkokzyw", // Your Formspree form URL
+      title: "Join the Waitlist", // Form title
+      fields: [
+        { 
+          type: "email", 
+          label: "Email:", 
+          name: "email",
+          required: true,
+          placeholder: "Enter your email" // Placeholder for email input
+        },
+        { 
+          type: "submit", 
+          value: "Join Now" // Submit button text
+        }
+      ],
+      styles: {
+        title: {
+          backgroundColor: "#050a09", // Background for title
+          color: "#edf6f4" // Light title text color
+        },
+        button: {
+          backgroundColor: "rgba(0, 0, 0, 0.3)", // Glassmorphic button style
+          color: "#edf6f4", // Light button text color
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Frosted border effect
+          borderRadius: "12px", // Rounded corners for button
+          padding: "10px 20px", // Button padding
+          fontSize: "16px", // Button font size
+          width: "auto", // Ensure button doesn't stretch
+        },
+        input: {
+          backgroundColor: "rgba(255, 255, 255, 0.1)", // Transparent input background
+          color: "#edf6f4", // Light input text color
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Light input border
+          borderRadius: "10px", // Rounded input corners
+          padding: "10px", // Padding for input fields
+          width: "100%" // Full width for input fields
+        }
+      },
+      container: "#formspreeButtonWrapper" // Ensure formbutton loads inside the wrapper
+    });
+  </script>
 
 
 </body>
