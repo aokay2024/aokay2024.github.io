@@ -32,7 +32,7 @@
 
     /* Glassmorphic welcome box */
     .glass-box {
-      background: rgba(255, 255, 255, 0.1); /* Transparent glass-like background */
+      background: rgba(255, 255, 255, 0.15); /* Increased opacity for the box */
       backdrop-filter: blur(12px); /* Blur for glassmorphism */
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.2); /* Frosted border */
@@ -41,7 +41,7 @@
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
       color: #edf6f4; /* Frosty text color */
       z-index: 10;
-      width: 80%;
+      width: 80%; /* Take up more width */
       max-width: 600px;
       margin-bottom: 20px;
     }
@@ -58,28 +58,29 @@
 
     /* Style for the waitlist button */
     .waitlist-button {
-      padding: 15px 30px;
-      background-color: rgba(92, 120, 169, 0.3); /* Glassy button */
+      padding: 20px; /* Larger padding for the button */
+      background-color: rgba(255, 255, 255, 0.15); /* Same as glass box */
       border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
-      border-radius: 12px;
+      border-radius: 20px;
       color: #fff;
-      font-size: 1.2em;
+      font-size: 1.3em;
       cursor: pointer;
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
       z-index: 12;
-      width: 80%;
-      max-width: 400px;
+      width: 80%; /* Make the button wider */
+      max-width: 600px;
+      margin-bottom: 20px; /* Space between button and form */
     }
 
     .waitlist-button:hover {
-      background-color: rgba(53, 81, 101, 0.3); /* Darker on hover */
+      background-color: rgba(255, 255, 255, 0.25); /* Slightly more opaque on hover */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
     }
 
     /* Hidden form container for smooth dropdown */
     .form-container {
-      max-width: 400px;
-      width: 100%;
+      max-width: 600px;
+      width: 80%; /* Form width same as button */
       overflow: hidden;
       height: 0;
       transition: height 0.4s ease;
@@ -88,13 +89,16 @@
 
     /* Glassmorphic form styling */
     form {
-      background: rgba(255, 255, 255, 0.1); /* Transparent glass-like background */
+      background: rgba(255, 255, 255, 0.15); /* Same opacity for the form as the glass box */
       backdrop-filter: blur(12px); /* Blur effect for glassmorphism */
-      border-radius: 12px;
+      border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.2); /* Soft frosted border */
       padding: 30px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
       color: #edf6f4; /* Frosty text color */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the form fields */
     }
 
     label {
@@ -102,6 +106,8 @@
       color: #edf6f4;
       display: block;
       margin-bottom: 10px;
+      width: 100%; /* Make label span full width */
+      max-width: 500px; /* Limit label width */
     }
 
     input[type="email"],
@@ -113,6 +119,7 @@
       margin-bottom: 20px;
       background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
       color: #edf6f4; /* Light text color */
+      max-width: 500px; /* Limit input and textarea width */
     }
 
     input[type="email"]:focus,
@@ -128,18 +135,19 @@
 
     button {
       width: 100%;
-      padding: 12px;
-      background-color: rgba(92, 120, 169, 0.3); /* Glassy button background */
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.15); /* Glassy button background */
       border: none;
-      border-radius: 8px;
+      border-radius: 20px;
       color: #fff;
-      font-size: 1.1em;
+      font-size: 1.2em;
       cursor: pointer;
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      max-width: 500px; /* Limit button width */
     }
 
     button:hover {
-      background-color: rgba(53, 81, 101, 0.3);
+      background-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
