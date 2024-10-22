@@ -22,7 +22,12 @@
       margin: 0;
     }
 
-
+  .form-button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers vertically if you need it */
+    height: 100vh; /* Optional: Full height to vertically center if needed */
+  }
 canvas {
   display: block;
   position: fixed; /* Fix the canvas to the background */
@@ -38,11 +43,12 @@ canvas {
 
   <canvas id="networkCanvas"></canvas>
   <script src="neuralNetworkAnimation.js"></script>
-<div class="container">
   <div class="glass-box">
     <h2>Welcome to A-OK AI</h2>
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
   </div>
+
+    <div class="form-button-container">
 <!-- Load the Formbutton script from Formspree -->
 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
 
@@ -89,7 +95,7 @@ canvas {
     }
   });
 </script>
-</div>
+    </div>
 
 
 </body>
