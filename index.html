@@ -42,58 +42,22 @@ canvas {
   </div>
 
 
-  <!-- Load the Formspree form button script -->
-  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<!-- Simple HTML Form for Formspree (No PHP Required) -->
+<form
+  action="https://formspree.io/f/xdkokzyw"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email" placeholder="Enter your email" required>
+  </label>
+  <label>
+    Your message:
+    <textarea name="message" placeholder="Enter your message" required></textarea>
+  </label>
+  <button type="submit">Send</button>
+</form>
 
-  <script>
-    /* Formspree formbutton */
-    window.formbutton = window.formbutton || function() {
-      (formbutton.q = formbutton.q || []).push(arguments);
-    };
-
-    /* Customize the formbutton below */
-    formbutton("create", {
-      action: "https://formspree.io/f/xdkokzyw", // Your Formspree form URL
-      title: "Join the Waitlist", // Form title
-      theme: "classic",
-      fields: [
-        { 
-          type: "email", 
-          label: "Email:", 
-          name: "email",
-          required: true,
-          placeholder: "Enter your email" // Placeholder for email input
-        },
-        { 
-          type: "submit", 
-          value: "Join Now" // Submit button text
-        }
-      ],
-      styles: {
-        title: {
-          backgroundColor: "#050a09", // Background for title
-          color: "#edf6f4" // Light title text color
-        },
-        button: {
-          backgroundColor: "rgba(0, 0, 0, 0.3)", // Glassmorphic button style
-          color: "#edf6f4", // Light button text color
-          border: "1px solid rgba(255, 255, 255, 0.2)", // Frosted border effect
-          borderRadius: "12px", // Rounded corners for button
-          padding: "10px 20px", // Button padding
-          fontSize: "16px", // Button font size
-          width: "auto", // Ensure button doesn't stretch
-        },
-        input: {
-          backgroundColor: "rgba(255, 255, 255, 0.1)", // Transparent input background
-          color: "#edf6f4", // Light input text color
-          border: "1px solid rgba(255, 255, 255, 0.2)", // Light input border
-          borderRadius: "10px", // Rounded input corners
-          padding: "10px", // Padding for input fields
-          width: "100%" // Full width for input fields
-        }
-      },
-    });
-  </script>
 
 
 </body>
