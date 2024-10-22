@@ -8,11 +8,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neural Network Animation</title>
   <style>
-    body, html {
-      margin: 0;
+       /* Center the button on the page */
+    body {
+    margin: 0;
       padding: 0;
       overflow: hidden;
-      background: #111;
+      font-family: Arial, sans-serif;
+      background: #111; /* Dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Make sure the button container is centered */
+    .form-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Add a container to give the button some space */
+    .form-button-container button {
+      font-size: 1.5em; /* Larger text size */
+      padding: 20px 40px; /* Increase padding to make the button larger */
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.3); /* Glassmorphic background */
+      color: #edf6f4; /* Light text color */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Frosted border */
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    /* Hover effect to make the button more interactive */
+    .form-button-container button:hover {
+      background-color: rgba(0, 0, 0, 0.4); /* Slightly darker on hover */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
     }
 canvas {
   display: block;
@@ -35,52 +70,52 @@ canvas {
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
   </div>
 </div>
-
-<!-- Load the Formbutton script from Formspree -->
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-
-<script>
-  /* paste this line in verbatim */
-  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-  
-  /* customize formbutton below */     
-  formbutton("create", {
-    action: "https://formspree.io/f/xdkokzyw",  // Your Formspree form URL
-    title: "Join the Waitlist",  // Updated title
-    fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-        placeholder: "Enter your email"  // Placeholder text for the email field
-      },
-      { type: "submit", value: "Join Now" }  // Custom submit button label
-    ],
-    styles: {
-      title: {
-        backgroundColor: "#050a09",  // Dark background for the title
-        color: "#edf6f4",  // Light frosty blue text color for the title
-      },
-      button: {
-        backgroundColor: "rgba(0, 0, 0, 0.3)",  // Glassmorphic button style
-        color: "#edf6f4",  // Light text color
-        border: "1px solid rgba(255, 255, 255, 0.2)",  // Frosted border effect
-        borderRadius: "12px",  // Rounded corners
-        padding: "10px 20px",  // Padding for button size
-        fontSize: "16px"  // Font size for button text
-      },
-      input: {
-        backgroundColor: "rgba(255, 255, 255, 0.1)",  // Transparent input background
-        color: "#edf6f4",  // Light input text color
-        border: "1px solid rgba(255, 255, 255, 0.2)",  // Light border for inputs
-        borderRadius: "10px",  // Rounded input corners
-        padding: "10px",  // Padding for input fields
-        width: "100%"  // Full width for input fields
-      }
-    }
-  });
-</script>
+<div class="form-button-container">
+    <!-- Load the Formspree form button script -->
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      /* paste this line in verbatim */
+      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+      
+      /* customize formbutton below */     
+      formbutton("create", {
+        action: "https://formspree.io/f/xdkokzyw",  // Your Formspree form URL
+        title: "Join the Waitlist",  // Updated title
+        fields: [
+          { 
+            type: "email", 
+            label: "Email:", 
+            name: "email",
+            required: true,
+            placeholder: "Enter your email"  // Placeholder text for the email field
+          },
+          { type: "submit", value: "Join Now" }  // Custom submit button label
+        ],
+        styles: {
+          title: {
+            backgroundColor: "#050a09",  // Dark background for the title
+            color: "#edf6f4",  // Light frosty blue text color for the title
+          },
+          button: {
+            backgroundColor: "rgba(0, 0, 0, 0.3)",  // Glassmorphic button style
+            color: "#edf6f4",  // Light text color
+            border: "1px solid rgba(255, 255, 255, 0.2)",  // Frosted border effect
+            borderRadius: "12px",  // Rounded corners
+            padding: "20px 40px",  // Large button size
+            fontSize: "1.5em",  // Larger font size
+          },
+          input: {
+            backgroundColor: "rgba(255, 255, 255, 0.1)",  // Transparent input background
+            color: "#edf6f4",  // Light input text color
+            border: "1px solid rgba(255, 255, 255, 0.2)",  // Light border for inputs
+            borderRadius: "10px",  // Rounded input corners
+            padding: "10px",  // Padding for input fields
+            width: "100%"  // Full width for input fields
+          }
+        }
+      });
+    </script>
+  </div>
 
 
 </body>
