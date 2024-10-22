@@ -21,6 +21,64 @@
       height: 100vh;
       margin: 0;
     } 
+        form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    label {
+      font-size: 1em;
+      color: #333;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      font-size: 1em;
+      color: #333;
+    }
+
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #5c78a9; /* Accent color on focus */
+      outline: none;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5c78a9; /* Primary button color */
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #355165; /* Darker color on hover */
+    }
+
+    button:focus {
+      outline: none;
+    }
 canvas {
   display: block;
   position: fixed; /* Fix the canvas to the background */
