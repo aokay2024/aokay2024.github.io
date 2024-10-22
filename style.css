@@ -8,7 +8,7 @@ body, html {
 /* Glassmorphic Navbar */
 .glass-navbar {
   width: 100%; /* Full width */
-  background: rgba(0, 0, 0, 0.15); /* Glassmorphic background */
+  background: rgba(1, 1, 1, 0.15); /* Glassmorphic background */
   padding: 15px 50px; /* Padding inside the navbar */
   box-sizing: border-box; /* Ensures padding is included in the width */
   display: flex;
