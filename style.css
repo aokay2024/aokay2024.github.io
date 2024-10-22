@@ -48,7 +48,7 @@ body, html {
 /* Link Styles */
 .nav-links li a {
   text-decoration: none;
-  color: car(--text);
+  color: var(--text);
   font-size: 1.1em;
   font-weight: 600;
   position: relative;
