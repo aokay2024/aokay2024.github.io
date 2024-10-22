@@ -104,38 +104,38 @@ body, html {
 .text-box {
   flex: 1 1 calc(33.333% - 40px); /* Flexible boxes that take up 1/3rd of the row */
   min-width: 280px; /* Ensure minimum width */
-  background-color: var(--primary); /* Default color */
   border-radius: 16px;
   padding: 30px;
   color: var(--text); /* Frosty text color */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light modern shadow */
   position: relative;
   overflow: hidden;
   font-size: 1.1em;
   line-height: 1.6;
+  background: linear-gradient(135deg, var(--primary), var(--accent)); /* Default gradient background */
   z-index: 9;
 }
 
-/* Specific Box Colors */
+/* Specific Box Gradients */
 .text-box:nth-child(1) {
-  background: var(--primary); /* Frosty blue background */
+  background: linear-gradient(135deg, var(--primary), var(--accent)); /* Frosty blue to accent */
 }
 
 .text-box:nth-child(2) {
-  background: var(--accent); /* Accent color for second box */
+  background: linear-gradient(135deg, var(--accent), #355165); /* Accent to secondary color */
 }
 
 .text-box:nth-child(3) {
-  background: var(--secondary); /* Darker blue background for contrast */
+  background: linear-gradient(135deg, #5ca9a9, #355165); /* Custom complementary gradient */
 }
 
 .text-box:nth-child(4) {
-  background: #5ca9a9; /* Custom complementary color */
+  background: linear-gradient(135deg, #a18bc3, #5ca9a9); /* Another complementary gradient */
 }
 
 .text-box:nth-child(5) {
-  background: #a18bc3; /* Another complementary color */
+  background: linear-gradient(135deg, #edf6f4, #a18bc3); /* Light frosty gradient */
 }
 
 /* Text Styling */
@@ -150,6 +150,7 @@ body, html {
 .text-box:hover {
   transform: translateY(-10px); /* Modern lift effect */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, var(--accent), var(--primary)); /* Reverse gradient on hover */
 }
 
 /* Box Accent Line (Modern Detail) */
@@ -177,6 +178,7 @@ body, html {
     max-width: 100%;
   }
 }
+
 
 /* Add global body and background color */
 body {
