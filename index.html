@@ -21,18 +21,56 @@
       height: 100vh;
       margin: 0;
     } 
-        form {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       
+canvas {
+  display: block;
+  position: fixed; /* Fix the canvas to the background */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Send the canvas behind the navbar */
+  width: 100vw; /* Take full screen width */
+  height: 100vh; /* Take full screen height */
+}
+      
+    /* Style for the button */
+    .waitlist-button {
+      padding: 12px 24px;
+      background-color: #5c78a9; /* Primary button color */
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .waitlist-button:hover {
+      background-color: #355165; /* Darker color on hover */
+    }
+
+    /* Hidden form container with smooth transition */
+    .form-container {
       max-width: 400px;
       width: 100%;
+      overflow: hidden;
+      height: 0;
+      transition: height 0.4s ease;
+    }
+
+    /* Glassmorphic form styling */
+    form {
+      background: rgba(255, 255, 255, 0.1); /* Transparent glass-like background */
+      backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Soft frosted border */
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      color: #edf6f4; /* Light text color for glass theme */
     }
 
     label {
       font-size: 1em;
-      color: #333;
+      color: #edf6f4;
       display: block;
       margin-bottom: 10px;
     }
@@ -41,12 +79,11 @@
     textarea {
       width: 100%;
       padding: 12px;
-      border: 1px solid #ddd;
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Light transparent border */
       border-radius: 8px;
       margin-bottom: 20px;
-      background-color: #f9f9f9;
-      font-size: 1em;
-      color: #333;
+      background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+      color: #edf6f4; /* Light text color */
     }
 
     input[type="email"]:focus,
@@ -63,7 +100,7 @@
     button {
       width: 100%;
       padding: 12px;
-      background-color: #5c78a9; /* Primary button color */
+      background-color: #5c78a9;
       border: none;
       border-radius: 8px;
       color: #fff;
@@ -73,21 +110,8 @@
     }
 
     button:hover {
-      background-color: #355165; /* Darker color on hover */
+      background-color: #355165;
     }
-
-    button:focus {
-      outline: none;
-    }
-canvas {
-  display: block;
-  position: fixed; /* Fix the canvas to the background */
-  top: 0;
-  left: 0;
-  z-index: 1; /* Send the canvas behind the navbar */
-  width: 100vw; /* Take full screen width */
-  height: 100vh; /* Take full screen height */
-}
   </style>
 </head>
 <body>
@@ -99,23 +123,32 @@ canvas {
     <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
   </div>
 
-<div class="glass-box">
-<!-- Simple HTML Form for Formspree (No PHP Required) -->
-<form
-  action="https://formspree.io/f/xdkokzyw"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email" placeholder="Enter your email" required>
-  </label>
-  <label>
-    Your message:
-    <textarea name="message" placeholder="Enter your message" required></textarea>
-  </label>
-  <button type="submit">Send</button>
-</form>
-</div>
+  <!-- Button to trigger the dropdown form -->
+  <button class="waitlist-button" onclick="toggleForm()">Join Our Waitlist</button>
+
+  <!-- Hidden form that will dropdown when the button is clicked -->
+  <div class="form-container" id="waitlistForm">
+    <form action="https://formspree.io/f/xdkokzyw" method="POST">
+      <label for="email">Your email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Your message:</label>
+      <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleForm() {
+      var formContainer = document.getElementById('waitlistForm');
+      if (formContainer.style.height === "0px" || formContainer.style.height === "") {
+        formContainer.style.height = formContainer.scrollHeight + "px";
+      } else {
+        formContainer.style.height = "0px";
+      }
+    }
+  </script>
 
 
 </body>
