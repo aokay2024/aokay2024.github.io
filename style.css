@@ -7,7 +7,7 @@ body, html {
 
 /* Glassmorphic Navbar */
 .glass-navbar {
-  width: 100%;
+  width: 110%;
   max-width: 1200px;
   background: rgba(255, 255, 255, 0.15); /* Slightly less transparency for sharper look */
   padding: 15px 30px;
@@ -19,7 +19,6 @@ body, html {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly crisper border */
   position: relative;
   z-index: 10;
-  border-radius: 8px; /* Less rounded corners */
 }
 
 /* Logo */
