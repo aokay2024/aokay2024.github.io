@@ -128,7 +128,8 @@
       max-width: 500px; /* Limit input and textarea width */
     }
 
-    input[type="checkbox"] {
+    input[type="checkbox"],
+    input[type="radio"] {
       margin-right: 10px;
     }
 
@@ -162,12 +163,14 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
+    /* Ensure checkboxes and radio buttons are left-aligned */
     .checkbox-group, .radio-group {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-start; /* Left-align the checkboxes and radio buttons */
       margin-bottom: 20px;
       max-width: 500px;
+      width: 100%;
     }
 
     .checkbox-group label, .radio-group label {
@@ -185,7 +188,7 @@
   <!-- Glassmorphic Black Welcome Box -->
   <div class="glass-box">
     <h2>Welcome to A-OK AI</h2>
-    <p>We specialize in creating custom AI solutions for businesses. Our mission is to make AI approachable, affordable, and tailored to your needs.</p>
+    <p>We specialize in creating custom AI solutions designed to fit businesses of any size. Whether you're a small family-owned operation or a large enterprise, we deliver flexible, scalable AI technologies tailored to your unique needs. We're not just focused on the mainstream – we proudly tackle industries that are often left behind in technical advancement, bringing cutting-edge innovation to farming, manufacturing, retail, and beyond. Our mission is to make AI accessible, affordable, and transformative, no matter your field or budget. Let's shape the future of your business together.</p>
   </div>
 
   <!-- Join Waitlist Button -->
@@ -214,13 +217,6 @@
         <label><input type="checkbox" name="areas[]" value="Inventory & Supply Chain Management">Inventory & Supply Chain Management</label>
         <label><input type="checkbox" name="areas[]" value="Marketing & Sales Optimization">Marketing & Sales Optimization</label>
         <label><input type="text" name="areas_other" placeholder="Other (please specify)"></label>
-      </div>
-
-      <label>How customizable do you need your AI solution to be?</label>
-      <div class="radio-group">
-        <label><input type="radio" name="customization" value="Very flexible" required>Very flexible – tailored to specific needs</label>
-        <label><input type="radio" name="customization" value="Some customization">Some customization – adaptable with standard features</label>
-        <label><input type="radio" name="customization" value="Minimal customization">Minimal customization – prefer a ready-made solution</label>
       </div>
 
       <label>What is your current budget range for AI solutions?</label>
