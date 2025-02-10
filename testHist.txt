@@ -1,0 +1,6 @@
+This is a test document to see how the histogram javascript code works. 
+This could be useful for visualizing my senior research project.
+Ideally I would like to use the lord of the rings books to test the code but that is a massive document that might not be worth the trouble.
+It should help though.
+I think I will probably see high values for vowels like AEIOU.
+I think I will be the most common character.
